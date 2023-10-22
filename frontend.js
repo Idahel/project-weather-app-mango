@@ -10,7 +10,7 @@ const displayWeather = (weatherData) => {
 
   const sunriseTime = convertTimestampToTime(weatherData.current.sys.sunrise, timezoneOffset);
   const sunsetTime = convertTimestampToTime(weatherData.current.sys.sunset, timezoneOffset);
-  const temperatureCelsius = Math.round(weatherData.current.main.temp);
+  const temperatureCelsius = (weatherData.current.main.temp).toFixed(1);
   const weatherStatus = weatherData.current.weather[0].main;
 
   const weatherStatusToday = (weatherStatus) => {
